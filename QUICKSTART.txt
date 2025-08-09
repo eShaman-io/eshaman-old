@@ -1,0 +1,13 @@
+DOUBLE-CLICK GUIDE (Windows):
+
+1) Right-click `Start-Here-Windows.ps1` → "Run with PowerShell".
+2) Log in when the GitHub/Stripe/Firebase windows open.
+3) Paste the secrets when prompted (you can skip and add later in GitHub → Settings → Secrets).
+4) The script will create a private repo under `gabrielj12/eShaman`, push code, set branch protection, set secrets, set up Firebase, and create Stripe products/prices.
+5) When it says "All done", open your repo: https://github.com/gabrielj12/eShaman
+
+macOS:
+1) Open Terminal in this folder.
+2) `chmod +x Start-Here-Mac.sh && ./Start-Here-Mac.sh`
+
+If anything errors, tell me the exact line shown and I’ll fix it.
