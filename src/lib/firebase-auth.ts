@@ -14,7 +14,7 @@ const firebaseConfig = {
 let app: any = null;
 let auth: any = null;
 
-if (firebaseConfig.apiKey && firebaseConfig.apiKey.startsWith("AIza")) {
+if (firebaseConfig.apiKey) {
   app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
   auth = getAuth(app);
 }
