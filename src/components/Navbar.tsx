@@ -9,6 +9,7 @@ export default function Navbar() {
   const [user, setUser] = useState<null | { email?: string | null; displayName?: string | null }>(null);
 
   useEffect(() => {
+    if (!auth) return;
     return onAuthStateChanged(auth, (u) => {
       if (u) setUser({ email: u.email, displayName: u.displayName });
       else setUser(null);
@@ -16,6 +17,7 @@ export default function Navbar() {
   }, []);
 
   const signInGoogle = async () => {
+    if (!auth) return;
     const provider = new GoogleAuthProvider();
     await signInWithPopup(auth, provider);
   };
@@ -35,7 +37,7 @@ export default function Navbar() {
         {user ? (
           <>
             <span className="text-xs text-slate-300">{user.displayName || user.email}</span>
-            <button className="rounded-2xl px-3 py-1 bg-white/10 hover:bg-white/20" onClick={() => signOut(auth)}>
+            <button className="rounded-2xl px-3 py-1 bg-white/10 hover:bg-white/20" onClick={() => auth && signOut(auth)}>
               Sign out
             </button>
           </>
