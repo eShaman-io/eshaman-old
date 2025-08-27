@@ -1,39 +1,39 @@
-# eShaman — Monorepo Starter
+# eShaman — Spiritual AI App
 
-A production-ready starter for the **eShaman** spiritual AI app and brand.
+A production-ready **eShaman** spiritual AI application with complete setup automation.
 
 ## What’s inside
-- **apps/oracle-chat** – Next.js 14 app (TypeScript) for the Oracle chat + rituals
-- **apps/landing** – Placeholder for Framer site handoff
-- **infra/firebase** – Firebase config + Cloud Functions skeleton
-- **infra/stripe** – Stripe webhook endpoint skeleton
-- **packages/ui** – Shared UI library (shadcn/lucide ready)
-- **docs** – Developer handoff + architecture + Notion task list
-- **.github/workflows** – CI for installs, lint, type-check, and build
+- **Next.js 14** app with TypeScript for the Oracle chat, rituals, and authentication
+- **Firebase Authentication** integration for user management  
+- **OpenAI API** integration for spiritual guidance and oracle readings
+- **Stripe** integration for subscription billing
+- **Automated setup scripts** for Windows and macOS/Linux
+- **Complete documentation** and quickstart guides
 
 ## Quick start
 ```bash
-# 1) Clone and bootstrap
-pnpm i --ignore-scripts
+# 1) Clone and install dependencies
+pnpm install
 
-# 2) Copy envs from examples and fill secrets
-cp apps/oracle-chat/.env.example apps/oracle-chat/.env
-cp infra/firebase/functions/.env.example infra/firebase/functions/.env
-cp infra/stripe/.env.example infra/stripe/.env
+# 2) Copy environment file and fill in your API keys
+cp .env.example .env
 
-# 3) Dev
-pnpm -w run dev
+# 3) Start development server
+pnpm dev
 ```
 
 ### Scripts
-- `pnpm dev` – Runs Next dev for oracle-chat
-- `pnpm typecheck` – Repo-wide type checking
-- `pnpm lint` – Lint source
-- `pnpm build` – Build all workspaces
+- `pnpm dev` – Start Next.js development server
+- `pnpm build` – Build the application
+- `pnpm start` – Start production server
+- `pnpm lint` – Lint the code
+- `pnpm typecheck` – Type check the code
 
-### Notes
-- **Landing page** will be built/hosted in Framer; this repo keeps copy assets + tracking docs.
-- Use **GitHub Secrets** for environment variables when wiring Actions/CD.
+### Setup your API keys
+Edit `.env` file with your API keys:
+- **OpenAI API Key** for oracle functionality
+- **Stripe keys** for subscription billing
+- **Firebase config** for authentication
 
 
 ## Auto-create GitHub repo

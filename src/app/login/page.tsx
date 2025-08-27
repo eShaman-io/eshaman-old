@@ -13,6 +13,10 @@ export default function LoginPage() {
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!auth) {
+      setError("Firebase authentication not configured");
+      return;
+    }
     setError(null);
     setLoading(true);
     try {

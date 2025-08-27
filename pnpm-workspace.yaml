@@ -1,6 +1,0 @@
-packages:
-  - "apps/*"
-  - "infra/*"
-  - "infra/firebase/functions"
-  - "packages/*"
-  - "docs"
